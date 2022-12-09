@@ -155,6 +155,7 @@ disableBlurs=true
 ro.sf.blurs_are_caro=1
 ro.miui.has_real_blur=0
 persist.sys.background_blur_supported=false
+persist.sysui.disableBlur=true
 
 # Camera
 camera.disable_zsl_mode=1

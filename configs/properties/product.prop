@@ -13,12 +13,17 @@ audio.sys.mute.latency.factor=2
 audio.sys.offload.pstimeout.secs=3
 ro.af.client_heap_size_kbyte=7168
 
+# IOrap
+persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
+ro.iorapd.enable=false
+
 # Battery Saving
 persist.radio.add_power_save=1
 ro.ril.disable.power.collapse=0
 ro.ril.fast.dormancy.rule=1
 ro.ril.fast.dormancy.timeout=3
 ro.mot.eri.losalert.delay=100
+ro.vendor.use_data_netmgrd=true
 ro.vold.umsdirtyratio=20
 power.saving.mode=1
 
