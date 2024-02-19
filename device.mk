@@ -167,9 +167,6 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     libsuspend
 
-# DebugFS
-PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
-
 # Dex
 # Dex pre-opt
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
