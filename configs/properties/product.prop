@@ -5,9 +5,6 @@ ro.debuggable=1
 persist.service.debuggable=1
 persist.service.adb.enable=1
 
-# App
-ro.launcher.blur.appLaunch=0
-
 # Audio
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
