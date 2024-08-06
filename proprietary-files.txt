@@ -75,7 +75,6 @@ vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
 vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libbatterylistener.so
 vendor/lib64/libhfp_pal.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/libmcs.so
@@ -140,7 +139,7 @@ vendor/bin/agmcap
 vendor/bin/agmcompressplay
 vendor/bin/agmhostless
 vendor/bin/agmplay
--vendor/lib64/libagm.so
+vendor/lib64/libagm.so
 vendor/lib64/libagmclient.so
 vendor/lib64/libagmmixer.so
 vendor/lib64/libagm_compress_plugin.so

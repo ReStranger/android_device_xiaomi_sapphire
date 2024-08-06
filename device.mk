@@ -78,6 +78,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.r_submix.default \
+<<<<<<< HEAD
     sound_trigger.primary.bengal:64 \
     audio.usb.default \
     libaudiopreprocessing:64 \
@@ -86,6 +87,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing:64 \
     libtinycompress:64 \
     libvolumelistener:64
+    libbatterylistener
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm6225/audio/primary-hal
 
