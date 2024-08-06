@@ -79,7 +79,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libtinycompress \
-    libvolumelistener
+    libvolumelistener \
+    libbatterylistener
 
 PRODUCT_PACKAGES += \
     XiaomiDolby
