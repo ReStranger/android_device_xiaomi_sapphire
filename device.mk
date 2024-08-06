@@ -411,7 +411,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail:64 \
     libavservices_minijail.vendor:64 \
     libcodec2_hidl@1.0.vendor:64 \
-    libcodec2_vndk.vendor:64 \
     libsfplugin_ccodec_utils.vendor:64 \
     libplatformconfig
 
