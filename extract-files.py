@@ -98,7 +98,14 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
-        .clear_symbol_version('AHardwareBuffer_unlock')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
+    (
+        'vendor/lib64/libqcrilNr.so',
+        'vendor/lib64/libril-db.so',
+    ): blob_fixup().binary_regex_replace(
+        rb'persist\.vendor\.radio\.poweron_opt',
+        rb'persist.vendor.radio.poweron_ign',
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
