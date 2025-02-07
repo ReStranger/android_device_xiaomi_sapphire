@@ -10,6 +10,9 @@
     <!-- Show battery cycle count -->
     <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
 
+    <!-- Show Force LTE_CA toggle -->
+    <bool name="config_showForceLteCaToggle">true</bool>
+
     <!-- Whether to show min refresh rate in display settings -->
     <bool name="config_show_min_refresh_rate_switch">true</bool>
 
