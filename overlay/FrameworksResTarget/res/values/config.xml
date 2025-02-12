@@ -69,6 +69,9 @@
     <string name="config_oemFastChargerStatusValue" translatable="false">3</string>
 
      <!-- Doze: should the TYPE_PICK_UP_GESTURE sensor be used as a pulse signal. -->
-     <bool name="config_dozePulsePickup">true</bool>
+    <bool name="config_dozePulsePickup">true</bool>
+
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
 
 </resources>
