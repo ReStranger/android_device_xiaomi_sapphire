@@ -11,16 +11,19 @@ on property:vendor.post_boot.parsed=1
     # Disable native stats collection service
     stop statsd
 
-    # cpuset parameters
-    write /dev/cpuset/background/cpus 2-3
+    # Cpuset parameters
+    write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/foreground/cpus 0-2,5-7
+    write /dev/cpuset/foreground/cpus 0-2,4-7
     write /dev/cpuset/foreground/boost/cpus 4-7
     write /dev/cpuset/top-app/cpus 0-7
 
-    # configure input boost settings
-    write /proc/sys/walt/input_boost/input_boost_ms 200
-    write /proc/sys/walt/input_boost/powerkey_input_boost_ms 500
+    # Configure input boost settings
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 120
+    write /proc/sys/walt/input_boost/input_boost_ms 120
+    write /proc/sys/walt/input_boost/powerkey_input_boost_freq "1516800 0 0 0 2208000 0 0 0"
+    write /proc/sys/walt/input_boost/powerkey_input_boost_ms 400
+
 
     # CPUFreq
     write /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us 500
@@ -34,9 +37,9 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuctl/top-app/cpu.uclamp.min 1.00
     write /dev/cpuctl/foreground/cpu.uclamp.min 0.00
     write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/background/cpu.uclamp.max 512
-    write /dev/cpuctl/system-background/cpu.uclamp.max 512
-    write /dev/cpuctl/dex2oat/cpu.uclamp.max 615
+    write /dev/cpuctl/background/cpu.uclamp.max 50
+    write /dev/cpuctl/system-background/cpu.uclamp.max 50
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
     # Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 5% dex2oat ~2.5%)
     write /dev/cpuctl/background/cpu.shares 1024
     write /dev/cpuctl/system-background/cpu.shares 1024
@@ -56,10 +59,10 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/vm/kswapd_threads 1
 
     # IRQ Tuning
-    # IRQ 218: msm_drm0 -> CPU 6
-    # IRQ 209: kgsl_3d0_irq -> CPU 7
-    write /proc/irq/209/smp_affinity_list 7
-    write /proc/irq/218/smp_affinity_list 6
+    # IRQ 253: msm_drm0
+    # IRQ 208: kgsl_3d0_irq
+    write /proc/irq/208/smp_affinity_list 1
+    write /proc/irq/253/smp_affinity_list 2
 
 on init
     # Boot time uclamp tuning
