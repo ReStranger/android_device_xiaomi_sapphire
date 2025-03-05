@@ -83,7 +83,7 @@ MALLOC_SVELTE_FOR_LIBC32 := true
 SOONG_CONFIG_NAMESPACES += qcomDisplayVars
 SOONG_CONFIG_qcomDisplayVars += target_panel_dimension_multiplier
 SOONG_CONFIG_qcomDisplayVars_target_panel_dimension_multiplier := 10
-TARGET_SCREEN_DENSITY := 437
+TARGET_SCREEN_DENSITY := 440
 
 # DTB/DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
