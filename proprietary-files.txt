@@ -918,6 +918,7 @@ vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
+vendor/lib/qti.video.utils.videobufferlayout.so
 vendor/lib64/hw/gralloc.bengal.so
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplayconfig.qti.so
