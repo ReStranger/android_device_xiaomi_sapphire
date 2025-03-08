@@ -303,6 +303,7 @@ vendor/lib/libcamxswispiqmodule.so
 vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libofflinelog.so
+vendor/lib/libvideoutils.so
 vendor/lib64/camera/com.qti.sensor.n7_aac_gc16b3c_front_iii.so
 vendor/lib64/camera/com.qti.sensor.n7_aac_ov16a1q_front_i.so
 vendor/lib64/camera/com.qti.sensor.n7_aac_s5k4h7_ultra_i.so
