@@ -92,6 +92,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i '/#battery/,/]/s/select_higher: 1/select_higher: 0/' "${2}"
             ;;
+        vendor/bin/STFlashTool)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
         vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc)
             [ "$2" = "" ] && return 0
             sed -i 's|group system gps radio vendor_qti_diag vendor_ssgtzd|group system gps radio vendor_qti_diag|g' "${2}"
