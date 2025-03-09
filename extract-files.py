@@ -59,7 +59,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('setsockopt: 1'),
     'vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc': blob_fixup()
         .regex_replace('group system gps radio vendor_qti_diag vendor_ssgtzd', 'group system gps radio vendor_qti_diag'),
-    'vendor/bin/STFlashTool': blob_fixup()
+    ('vendor/bin/STFlashTool', 'vendor/lib64/libstfactory-vendor.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so')
