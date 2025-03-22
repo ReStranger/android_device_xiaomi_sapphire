@@ -50,7 +50,6 @@ ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
->>>>>>> 5eeec8b (topaz: Switch to 64 bit only builds)
 
 # Audio
 $(call soong_config_set, android_hardware_audio, run_64bit, true)
