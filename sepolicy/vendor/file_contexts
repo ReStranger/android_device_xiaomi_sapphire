@@ -47,5 +47,5 @@
 /vendor/bin/hw/android\.hardware\.power-service-qti                     u:object_r:hal_power_default_exec:s0
 
 # Sensors
-/vendor/bin/hw/android\.hardware\.sensors@2.1-service\.xiaomi-multihal  u:object_r:hal_sensors_default_exec:s0
+/vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal  u:object_r:hal_sensors_default_exec:s0
 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/mi_display/disp-DSI-0/dynamic_fps                                        u:object_r:vendor_sysfs_graphics:s0

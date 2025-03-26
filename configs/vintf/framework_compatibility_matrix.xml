@@ -48,6 +48,14 @@
             <instance>software</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="false">
+        <name>android.hardware.sensors</name>
+        <version>2</version>
+        <interface>
+            <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.nfc</name>
         <version>1.0</version>
