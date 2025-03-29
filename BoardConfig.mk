@@ -145,14 +145,34 @@ BOARD_KERNEL_CMDLINE := \
 	kasan=off \
         disable_dma32=on \
 	rcu_nocbs=all \
-        rcutree.enable_rcu_lazy=1 
-        
+        rcutree.enable_rcu_lazy=1
 
 # Kernel prebuilt
 TARGET_KERNEL_ARCH := arm64
 INLINE_KERNEL_BUILDING := true
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_VERSION := 5.15
+
+# Soong Override
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm6225
+QCOM_SOONG_NAMESPACE := hardware/qcom-caf/sm6225
+TARGET_HALS_PATH ?= $(QCOM_SOONG_NAMESPACE)
+
+# Gps
+USE_DEVICE_SPECIFIC_GPS := true
+DEVICE_SPECIFIC_GPS_PATH := $(TARGET_HALS_PATH)/audio
+
+# Audio
+USE_DEVICE_SPECIFIC_AUDIO := true
+DEVICE_SPECIFIC_AUDIO_PATH := $(TARGET_HALS_PATH)/audio
+
+# Display
+USE_DEVICE_SPECIFIC_DISPLAY := true
+DEVICE_SPECIFIC_DISPLAY_PATH := $(TARGET_HALS_PATH)/display
+
+# Media
+USE_DEVICE_SPECIFIC_MEDIA := true
+DEVICE_SPECIFIC_MEDIA_PATH := $(TARGET_HALS_PATH)/media
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/qcom-battery/input_suspend
