@@ -88,6 +88,14 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i '/#battery/,/]/s/select_higher: 1/select_higher: 0/' "${2}"
             ;;
+        vendor/lib64/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
+        vendor/bin/STFlashTool)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
         *)
             return 1
             ;;
