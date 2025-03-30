@@ -91,6 +91,9 @@ function blob_fixup() {
         vendor/lib64/libwvhidl.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+        vendor/bin/STFlashTool)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             ;;
         vendor/bin/STFlashTool)
             [ "$2" = "" ] && return 0
