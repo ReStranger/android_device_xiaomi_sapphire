@@ -78,6 +78,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.r_submix.default \
+    sound_trigger.primary.bengal:64 \
     audio.usb.default \
     libaudiopreprocessing:64 \
     libqcompostprocbundle:64 \
@@ -556,7 +557,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.sensors@2.1-service.xiaomi-multihal \
+    android.hardware.sensors-service.xiaomi-multihal \
     libsensorndkbridge:64
 
 PRODUCT_COPY_FILES += \
