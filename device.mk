@@ -61,25 +61,30 @@ PRODUCT_PACKAGES += \
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
-    com.dsi.ant@1.0.vendor
+    com.dsi.ant@1.0.vendor:64
 
 # Audio
+SOONG_CONFIG_NAMESPACES += android_hardware_audio
+SOONG_CONFIG_android_hardware_audio += \
+     run_64bit
+SOONG_CONFIG_android_hardware_audio_run_64bit := true
+
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.0-impl \
-    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio@7.0-impl:64 \
+    android.hardware.audio.effect@7.0-impl:64 \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl:64
 
 PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.r_submix.default \
     audio.usb.default \
-    libaudiopreprocessing \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libtinycompress \
-    libvolumelistener
+    libaudiopreprocessing:64 \
+    libqcompostprocbundle:64 \
+    libqcomvisualizer:64 \
+    libqcomvoiceprocessing:64 \
+    libtinycompress:64 \
+    libvolumelistener:64
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm6225/audio/primary-hal
 
@@ -110,15 +115,15 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth.audio-impl:64 \
+    android.hardware.bluetooth.audio@2.1-impl:64 \
+    android.hardware.bluetooth@1.0.vendor:64 \
     android.hardware.bluetooth.audio-V2-ndk.vendor \
-    audio.bluetooth.default \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    audio.bluetooth.default:64 \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor:64 \
     vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+    vendor.qti.hardware.btconfigstore@1.0.vendor:64 \
+    vendor.qti.hardware.btconfigstore@2.0.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -126,27 +131,27 @@ PRODUCT_COPY_FILES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti \
-    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-impl-qti:64 \
+    android.hardware.boot@1.2-impl-qti.recovery:64 \
     android.hardware.boot@1.2-service
 
 # Camera
 PRODUCT_PACKAGES += \
-    libutilscallstack.vendor \
-    android.hardware.camera.device@3.6.vendor \
+    libutilscallstack.vendor:64 \
+    android.hardware.camera.device@3.6.vendor:64 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
-    libcamera2ndk_vendor \
-    libdng_sdk.vendor \
-    libgui_vendor \
-    libstdc++_vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    libcamera2ndk_vendor:64 \
+    libdng_sdk.vendor:64 \
+    libgui_vendor:64 \
+    libstdc++_vendor:64 \
+    vendor.qti.hardware.camera.device@1.0.vendor:64 \
+    vendor.qti.hardware.camera.postproc@1.0.vendor:64
 
 PRODUCT_PACKAGES += \
-    android.hardware.camera.device-V1-ndk.vendor \
-    android.hardware.camera.metadata-V1-ndk.vendor \
-    android.hardware.camera.provider-V1-ndk.vendor
+    android.hardware.camera.device-V1-ndk.vendor:64 \
+    android.hardware.camera.metadata-V1-ndk.vendor:64 \
+    android.hardware.camera.provider-V1-ndk.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
@@ -157,7 +162,7 @@ PRODUCT_COPY_FILES += \
 
 # Capabilityconfigstore
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor:64
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -208,14 +213,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4.vendor \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     libdisplayconfig.qti \
-    libdisplayconfig.system.qti \
+    libdisplayconfig.system.qti:64 \
     libgralloc.qti \
     libqdMetaData \
     libqdMetaData.system \
     libsdmcore \
     libsdmutils \
     vendor.display.config@1.14 \
-    vendor.display.config@1.11.vendor \
+    vendor.display.config@1.11.vendor:64 \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
@@ -228,7 +233,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer@3.0.vendor \
     vendor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor:64 \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.qti.hardware.display.mapperextensions@1.0.vendor \
@@ -241,10 +246,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light-V2-ndk.vendor \
     android.hardware.memtrack-V1-ndk.vendor \
     vendor.qti.hardware.display.config-V1-ndk.vendor \
-    vendor.qti.hardware.display.config-V2-ndk.vendor \
+    vendor.qti.hardware.display.config-V2-ndk.vendor:64 \
     vendor.qti.hardware.display.config-V3-ndk.vendor \
     vendor.qti.hardware.display.config-V4-ndk.vendor \
-    vendor.qti.hardware.display.config-V5-ndk.vendor \
+    vendor.qti.hardware.display.config-V5-ndk.vendor:64 \
     vendor.qti.hardware.display.config-V6-ndk.vendor
 
 PRODUCT_COPY_FILES += \
@@ -252,7 +257,7 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
+    android.hardware.drm@1.4.vendor:64 \
     android.hardware.drm-service.clearkey \
     android.hardware.drm-V1-ndk.vendor \
     libdrm.vendor
@@ -260,7 +265,7 @@ PRODUCT_PACKAGES += \
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
-    fastbootd
+    fastbootd:64
 
 # Fastcharge
 PRODUCT_PACKAGES += \
@@ -271,21 +276,21 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
 PRODUCT_PACKAGES += \
-    libudfpshandler
+    libudfpshandler:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.gatekeeper@1.0.vendor:64
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss-V2-ndk.vendor
+    android.hardware.gnss.measurement_corrections@1.1.vendor:64 \
+    android.hardware.gnss.visibility_control@1.0.vendor:64 \
+    android.hardware.gnss@2.1.vendor:64 \
+    android.hardware.gnss-V2-ndk.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
@@ -308,10 +313,10 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0.vendor \
-    android.hidl.base@1.0.vendor \
-    libhidltransport.vendor \
-    libhwbinder.vendor
+    android.hidl.allocator@1.0.vendor:64 \
+    android.hidl.base@1.0.vendor:64 \
+    libhidltransport.vendor:64 \
+    libhwbinder.vendor:64
 
 # Hotword enrollment
 PRODUCT_COPY_FILES += \
@@ -336,7 +341,7 @@ PRODUCT_PACKAGES += \
 
 # IR
 PRODUCT_PACKAGES += \
-    android.hardware.ir-service.xiaomi
+    android.hardware.ir-service.xiaomi:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
@@ -376,17 +381,17 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor \
-    libkeymaster_messages.vendor
+    android.hardware.keymaster@4.1.vendor:64 \
+    libkeymaster_messages.vendor:64
 
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
-    android.hardware.security.keymint-V1-ndk.vendor \
-    android.hardware.security.keymint-V2-ndk.vendor \
-    android.hardware.security.rkp-V3-ndk.vendor \
-    android.hardware.security.secureclock-V1-ndk.vendor \
-    android.hardware.security.sharedsecret-V1-ndk.vendor
+    android.hardware.security.keymint-V1-ndk.vendor:64 \
+    android.hardware.security.keymint-V2-ndk.vendor:64 \
+    android.hardware.security.rkp-V3-ndk.vendor:64 \
+    android.hardware.security.secureclock-V1-ndk.vendor:64 \
+    android.hardware.security.sharedsecret-V1-ndk.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
@@ -398,11 +403,11 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libavservices_minijail \
-    libavservices_minijail.vendor \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
-    libsfplugin_ccodec_utils.vendor \
+    libavservices_minijail:64 \
+    libavservices_minijail.vendor:64 \
+    libcodec2_hidl@1.0.vendor:64 \
+    libcodec2_vndk.vendor:64 \
+    libsfplugin_ccodec_utils.vendor:64 \
     libplatformconfig
 
 PRODUCT_COPY_FILES += \
@@ -433,9 +438,9 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.st \
-    android.hardware.secure_element@1.2.vendor \
-    libchrome.vendor \
+    android.hardware.nfc-service.st:64 \
+    android.hardware.secure_element@1.2.vendor:64 \
+    libchrome.vendor:64 \
     Tag
 
 PRODUCT_COPY_FILES += \
@@ -487,7 +492,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Perf
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.3.vendor
+    vendor.qti.hardware.perf@2.3.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
@@ -501,7 +506,7 @@ TARGET_BOARD_SUFFIX := _515
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.2.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
@@ -512,12 +517,12 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libcurl.vendor \
-    libjson \
-    libjsoncpp.vendor \
-    libqti_vndfwk_detect.vendor \
-    libqti_vndfwk_detect_vendor \
-    libvndfwk_detect_jni.qti.vendor
+    libcurl.vendor:64 \
+    libjson:64 \
+    libjsoncpp.vendor:64 \
+    libqti_vndfwk_detect.vendor:64 \
+    libqti_vndfwk_detect_vendor:64 \
+    libvndfwk_detect_jni.qti.vendor:64
 
 # QTI service tracker
 PRODUCT_PACKAGES += \
@@ -526,8 +531,8 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
-    android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio.config@1.3.vendor:64 \
+    android.hardware.radio.deprecated@1.0.vendor:64 \
     android.hardware.radio-V1-ndk.vendor \
     android.hardware.radio.config-V1-ndk.vendor \
     android.hardware.radio.data-V1-ndk.vendor \
@@ -536,10 +541,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.network-V1-ndk.vendor \
     android.hardware.radio.sim-V1-ndk.vendor \
     android.hardware.radio.voice-V1-ndk.vendor \
-    libprotobuf-cpp-full-3.9.1-vendorcompat \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat \
-    librmnetctl \
-    libsqlite.vendor
+    libprotobuf-cpp-full-3.9.1-vendorcompat:64 \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat:64 \
+    librmnetctl:64 \
+    libsqlite.vendor:64
 
 # Suspend properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -557,7 +562,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
-    libsensorndkbridge
+    libsensorndkbridge:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
@@ -570,7 +575,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libhidlbase_shim
+    libhidlbase_shim:64
 
 # Shipping API
 BOARD_SHIPPING_API_LEVEL := 33
@@ -615,7 +620,7 @@ PRODUCT_PACKAGES += libshim
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0.vendor \
+    android.hardware.thermal@2.0.vendor:64 \
     android.hardware.thermal-service.qti \
     libpsi.vendor
 
@@ -679,9 +684,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd-V1-ndk.vendor \
     android.hardware.wifi.supplicant-V1-ndk.vendor \
     hostapd \
-    libwpa_client \
-    libwifi-hal-ctrl \
-    libwifi-hal-qcom \
+    libwpa_client:64 \
+    libwifi-hal-ctrl:64 \
+    libwifi-hal-qcom:64 \
     wpa_supplicant \
     wpa_supplicant.conf
 

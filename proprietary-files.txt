@@ -62,14 +62,10 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # Audio
--vendor/lib/libar-gsl.so
--vendor/lib/libar-pal.so
--vendor/lib/liblx-osal.so
--vendor/lib/vendor.qti.hardware.pal@1.0-impl.so
--vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so
--vendor/lib64/liblx-osal.so
--vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
+vendor/lib64/libar-gsl.so
+vendor/lib64/libar-pal.so
+vendor/lib64/liblx-osal.so
+vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib64/hw/audio.primary.bengal.so
@@ -92,7 +88,7 @@ vendor/lib64/vendor.qti.hardware.pal@1.0.so
 vendor/lib64/soundfx/libmisoundfx.so
 
 # Audio Graph Manager
--vendor/lib64/libagm.so
+vendor/lib64/libagm.so
 vendor/bin/agmcap
 vendor/bin/agmcompressplay
 vendor/bin/agmhostless
@@ -105,12 +101,10 @@ vendor/lib64/libagm_mixer_plugin.so
 vendor/lib64/libagm_pcm_plugin.so
 vendor/lib64/libagmclient.so
 vendor/lib64/libagmmixer.so
--vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Audio SoundFX
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libshoebox.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libshoebox.so
 
@@ -172,11 +166,6 @@ vendor/lib64/vendor.qti.hardware.bttpi-V2-ndk.so
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
-vendor/lib/libcdfw.so
-vendor/lib/libcdfw_remote_api.so
-vendor/lib/libcdsp_default_listener.so
-vendor/lib/libcdsprpc.so
-vendor/lib/libmdsprpc.so
 vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libcdsp_default_listener.so
@@ -1309,7 +1298,6 @@ vendor/bin/STFlashTool
 vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/st21nfc_conf.txt
-vendor/lib/nfc_nci.st21nfc.st.so
 vendor/lib64/nfc_nci.st21nfc.st.so
 
 # Neural
@@ -1324,10 +1312,6 @@ vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libdsd2pcm.so
 
 # Perf
-system_ext/lib/vendor.qti.hardware.perf@2.0.so
-system_ext/lib/vendor.qti.hardware.perf@2.1.so
-system_ext/lib/vendor.qti.hardware.perf@2.2.so
-system_ext/lib/vendor.qti.hardware.perf@2.3.so
 system_ext/lib64/vendor.qti.hardware.perf@2.0.so
 system_ext/lib64/vendor.qti.hardware.perf@2.1.so
 system_ext/lib64/vendor.qti.hardware.perf@2.2.so
@@ -1369,27 +1353,6 @@ vendor/etc/perf/thermalboost.conf
 vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf.xml
 vendor/etc/vintf/manifest/vendor.qti.memory.pasrmanager@1.0-service.xml
-vendor/lib/hw/vendor.qti.memory.pasrmanager@1.0-impl.so
-vendor/lib/libpasrutils.so
-vendor/lib/libperfconfig.so
-vendor/lib/libperfgluelayer.so
-vendor/lib/libperfioctl.so
-vendor/lib/libqti-iopd-client.so
-vendor/lib/libqti-iopd.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libskewknob.so
-vendor/lib/vendor.qti.hardware.iop@1.0.so
-vendor/lib/vendor.qti.hardware.iop@2.0.so
-vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
-vendor/lib/vendor.qti.power.pasrmanager@1.0.so
-vendor/lib/vendor.qti.hardware.perf@2.0.so;MODULE_SUFFIX=-vendor
-vendor/lib/vendor.qti.hardware.perf@2.1.so;MODULE_SUFFIX=-vendor
-vendor/lib/vendor.qti.hardware.perf@2.2.so;MODULE_SUFFIX=-vendor
-vendor/lib/vendor.qti.hardware.perf@2.3.so;MODULE_SUFFIX=-vendor
-vendor/lib/vendor.qti.qspmhal@1.0-impl.so
-vendor/lib/vendor.qti.qspmhal@1.0.so
 vendor/lib64/hw/vendor.qti.memory.pasrmanager@1.0-impl.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libapengine.so
@@ -1447,18 +1410,6 @@ system_ext/app/QCC/QCC.apk
 system_ext/bin/qccsyshal@1.2-service
 system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc
 system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml
-system_ext/lib/libqcc.so
-system_ext/lib/libqcc_file_agent_sys.so
-system_ext/lib/libqcc_netstats.so
-system_ext/lib/libqccdme.so
-system_ext/lib/libqccfileservice.so
-system_ext/lib/vendor.qti.hardware.qccsyshal@1.0.so
-system_ext/lib/vendor.qti.hardware.qccsyshal@1.1.so
-system_ext/lib/vendor.qti.hardware.qccsyshal@1.2-halimpl.so
-system_ext/lib/vendor.qti.hardware.qccsyshal@1.2.so
-system_ext/lib/vendor.qti.hardware.qccvndhal@1.0.so
-system_ext/lib/vendor.qti.qccvndhal_aidl-V1-ndk.so
-system_ext/lib/vendor.qti.qccsyshal_aidl-V1-ndk.so
 system_ext/lib64/libqcc.so
 system_ext/lib64/libqcc_file_agent_sys.so
 system_ext/lib64/libqcc_netstats.so
@@ -1834,7 +1785,6 @@ vendor/etc/sensors/sns_reg_config
 vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
-vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 
 # Soter
@@ -1845,18 +1795,15 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
-<<<<<<< HEAD
-=======
 # SSR
 vendor/bin/ssr_diag
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 vendor/lib64/libsubsystem_control.so
 
->>>>>>> 5eeec8b (topaz: Switch to 64 bit only builds)
 # Thermal
--vendor/lib64/liblmthermallistner.so
--vendor/lib64/libthermalclient.so
+vendor/lib64/liblmthermallistner.so
+vendor/lib64/libthermalclient.so
 vendor/bin/thermal-engine-v2
 vendor/etc/init/init_thermal-engine-v2.rc
 
