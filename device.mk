@@ -448,7 +448,6 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libmm-omxcore \
     libOmxCore \
     libopus.vendor \
     libstagefright_amrnb_common.vendor \
