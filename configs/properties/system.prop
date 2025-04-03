@@ -64,6 +64,9 @@ ro.nfc.port=I2C
 # NTP
 persist.backup.ntpServer="0.pool.ntp.org"
 
+# Pre-Rendering
+ro.vendor.perf.scroll_opt=true
+
 # Radio
 DEVICE_PROVISIONED=1
 persist.vendor.radio.atfwd.start=true
