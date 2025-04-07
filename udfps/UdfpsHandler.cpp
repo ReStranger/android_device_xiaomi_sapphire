@@ -6,6 +6,7 @@
 
 #define LOG_TAG "UdfpsHandler.xiaomi_sm6225"
 
+#include <aidl/android/hardware/biometrics/fingerprint/BnFingerprint.h>
 #include <android-base/logging.h>
 #include <android-base/properties.h>
 #include <android-base/unique_fd.h>
@@ -14,7 +15,6 @@
 #include <sys/ioctl.h>
 #include <fstream>
 #include <thread>
-
 #include "mi_disp.h"
 #include "UdfpsHandler.h"
 #include "xiaomi_touch.h"
@@ -39,8 +39,9 @@
 
 #define FOD_PRESS_STATUS_PATH "/sys/class/touch/touch_dev/fod_press_status"
 
-namespace {
+using ::aidl::android::hardware::biometrics::fingerprint::AcquiredInfo;
 
+namespace {
 
 static bool readBool(int fd) {
     char c;
@@ -61,24 +62,23 @@ static bool readBool(int fd) {
     return c != '0';
 }
 
-static disp_event_resp* parseDispEvent(int fd) {
-    static char event_data[1024] = {0};
-    ssize_t size;
 
-    memset(event_data, 0x0, sizeof(event_data));
-    size = read(fd, event_data, sizeof(event_data));
+static std::unique_ptr<disp_event_resp> parseDispEvent(int fd) {
+    auto response = std::make_unique<disp_event_resp>();
+    ssize_t size = read(fd, response.get(), sizeof(disp_event_resp));
+
     if (size < 0) {
         LOG(ERROR) << "read fod event failed";
         return nullptr;
     }
 
-    if (size < sizeof(struct disp_event)) {
-        LOG(ERROR) << "Invalid event size " << size << ", expect at least "
-                   << sizeof(struct disp_event);
+    if (size < sizeof(disp_event_resp)) {
+        LOG(ERROR) << "Invalid event size " << size << ", expected at least "
+                   << sizeof(disp_event_resp);
         return nullptr;
     }
 
-    return (struct disp_event_resp*)&event_data[0];
+    return response;
 }
 
 }  // anonymous namespace
@@ -94,7 +94,6 @@ class XiaomiSm6225UdfpsHandler : public UdfpsHandler {
         LOG(DEBUG) << __func__ << "fingerprint vendor is: " << fpVendor;
         isFpcFod = fpVendor == "fpc_fod";
 
-        // Thread to notify fingeprint hwmodule about fod presses
         std::thread([this]() {
             int fd = open(FOD_PRESS_STATUS_PATH, O_RDONLY);
             if (fd < 0) {
@@ -119,7 +118,6 @@ class XiaomiSm6225UdfpsHandler : public UdfpsHandler {
                 mDevice->extCmd(mDevice, COMMAND_FOD_PRESS_STATUS,
                                 pressed ? PARAM_FOD_PRESSED : PARAM_FOD_RELEASED);
 
-                // Request HBM
                 disp_local_hbm_req req;
                 req.base.flag = 0;
                 req.base.disp_id = MI_DISP_PRIMARY;
@@ -128,7 +126,7 @@ class XiaomiSm6225UdfpsHandler : public UdfpsHandler {
                 ioctl(disp_fd_.get(), MI_DISP_IOCTL_SET_LOCAL_HBM, &req);
             }
         }).detach();
-         // Thread to listen for fod ui changes
+
         std::thread([this]() {
             int fd = open(DISP_FEATURE_PATH, O_RDWR);
             if (fd < 0) {
@@ -136,7 +134,6 @@ class XiaomiSm6225UdfpsHandler : public UdfpsHandler {
                 return;
             }
 
-            // Register for FOD events
             disp_event_req req;
             req.base.flag = 0;
             req.base.disp_id = MI_DISP_PRIMARY;
@@ -156,7 +153,7 @@ class XiaomiSm6225UdfpsHandler : public UdfpsHandler {
                     continue;
                 }
 
-                struct disp_event_resp* response = parseDispEvent(fd);
+                auto response = parseDispEvent(fd);
                 if (response == nullptr) {
                     continue;
                 }
@@ -180,11 +177,6 @@ class XiaomiSm6225UdfpsHandler : public UdfpsHandler {
     void onFingerDown(uint32_t /*x*/, uint32_t /*y*/, float /*minor*/, float /*major*/) {
         LOG(INFO) << __func__;
 
-         /*
-         * On fpc_fod devices, the waiting for finger message is not reliably sent...
-         * The finger down message is only reliably sent when the screen is turned off, so enable
-         * fod_status better late than never.
-         */
         if (isFpcFod) {
             setFodStatus(FOD_STATUS_ON);
         }
@@ -199,8 +191,7 @@ class XiaomiSm6225UdfpsHandler : public UdfpsHandler {
 
     void onAcquired(int32_t result, int32_t vendorCode) {
         LOG(INFO) << __func__ << " result: " << result << " vendorCode: " << vendorCode;
-        if (result == FINGERPRINT_ACQUIRED_GOOD) {
-            // Request to disable HBM already, even if the finger is still pressed
+        if (static_cast<AcquiredInfo>(result) == AcquiredInfo::GOOD) {
             disp_local_hbm_req req;
             req.base.flag = 0;
             req.base.disp_id = MI_DISP_PRIMARY;
@@ -211,14 +202,6 @@ class XiaomiSm6225UdfpsHandler : public UdfpsHandler {
             }
         }
 
-        /* vendorCode for goodix_fod devices:
-         * 21: waiting for finger
-         * 22: finger down
-         * 23: finger up
-         * On fpc_fod devices, the waiting for finger message is not reliably sent...
-         * The finger down message is only reliably sent when the screen is turned off, so enable
-         * fod_status better late than never.
-         */
         if (!isFpcFod && vendorCode == 21) {
             setFodStatus(FOD_STATUS_ON);
         } else if (isFpcFod && vendorCode == 22) {
