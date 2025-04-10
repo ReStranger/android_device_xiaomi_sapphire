@@ -88,6 +88,7 @@ SOONG_CONFIG_NAMESPACES += qcomDisplayVars
 SOONG_CONFIG_qcomDisplayVars += target_panel_dimension_multiplier
 SOONG_CONFIG_qcomDisplayVars_target_panel_dimension_multiplier := 10
 TARGET_SCREEN_DENSITY := 440
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # DTB/DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
