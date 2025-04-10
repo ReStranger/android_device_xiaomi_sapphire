@@ -388,6 +388,7 @@ persist.vendor.sensors.enable.rt_task=false
 persist.vendor.sensors.hal_trigger_ssr=false
 persist.vendor.sensors.support_direct_channel=false
 ro.vendor.sensors.xiaomi.udfps=true
+persist.vendor.sensors.debug.hal=0
 
 # USB
 ro.usb.uvc.enabled=true
