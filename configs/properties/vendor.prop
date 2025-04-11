@@ -355,7 +355,7 @@ persist.service.mount.playsnd=0
 ro.config.nocheckin=1
 
 # Netflix
-vendor.netflix.bsp_rev=Q6115-31409-1
+vendor.netflix.bsp_rev=Q6450-36256-1
 
 # NFC
 ro.vendor.se.type=HCE,UICC
