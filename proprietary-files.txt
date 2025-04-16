@@ -289,8 +289,6 @@ vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 
 # Camera
-system/lib/libpiex.so:vendor/lib/libpiex.so
-system/lib64/libpiex.so:vendor/lib64/libpiex.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libcamxfacialfeatures.so
 vendor/lib/libcamxfdalgo.so
