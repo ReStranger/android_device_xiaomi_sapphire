@@ -37,6 +37,18 @@ def lib_fixup_vendor_suffix( lib: str, partition: str, *args, **kwargs,): # fmt:
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    (
+        'com.qualcomm.qti.dpm.api@1.0',
+        'vendor.qti.diaghal@1.0',
+        'vendor.qti.hardware.fm@1.0',
+        'vendor.qti.hardware.dpmservice@1.0',
+        'vendor.qti.hardware.qccsyshal@1.0',
+        'vendor.qti.hardware.qccsyshal@1.1',
+        'vendor.qti.hardware.qccsyshal@1.2',
+        'vendor.qti.hardware.qccvndhal@1.0',
+        'vendor.qti.imsrtpservice@3.0',
+        'vendor.qti.imsrtpservice@3.1',
+    ): lib_fixup_vendor_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
@@ -63,6 +75,21 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('group system gps radio vendor_qti_diag vendor_ssgtzd', 'group system gps radio vendor_qti_diag'),
     ('vendor/bin/STFlashTool', 'vendor/lib64/libstfactory-vendor.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
+    (
+        'vendor/lib64/libalLDC.so',
+        'vendor/lib64/libalhLDC.so',
+        'vendor/lib64/libmorpho_ldc.so',
+        'vendor/lib64/libmorpho_Ldc.so',
+        'vendor/lib64/libmorpho_ubwc.so',
+        'vendor/lib64/libTrueSight.so',
+    ): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_acquire')
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
