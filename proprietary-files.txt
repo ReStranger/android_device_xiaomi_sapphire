@@ -1,5 +1,10 @@
 # All blobs below are extracted from sapphiren OS2.0.7.0.VNHMIXM and from eqs T1TBS33.32-8-9-7-2
 
+# Current blobs with ELF checks disabled:
+# libqtigefar and vendor.qti.hardware.pal@1.0-impl depend on libar-pal, which is decommonized
+# libqc2audio_hwaudiocodec depends on libpalclient, which is a gnu makefile target
+# vendor.qti.hardware.AGMIPC@1.0-impl and libmcs depend on libagm, which is decommonized
+
 # ACDB
 vendor/etc/acdbdata/bengal_idp/IDP_acdb_cal.acdb
 vendor/etc/acdbdata/bengal_idp/IDP_workspaceFileXml.qwsp
@@ -69,7 +74,7 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 -vendor/lib/liblx-osal.so
 -vendor/lib/vendor.qti.hardware.pal@1.0-impl.so
 -vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so
+-vendor/lib64/libar-pal.so;DISABLE_CHECKELF
 -vendor/lib64/liblx-osal.so
 -vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 system_ext/etc/permissions/audiosphere.xml
@@ -125,7 +130,7 @@ vendor/lib/libagm_pcm_plugin.so
 -vendor/lib/libagmmixer.so
 vendor/lib/vendor.qti.hardware.AGMIPC@1.0.so
 vendor/lib64/libagm_compress_plugin.so
-vendor/lib64/libagm_mixer_plugin.so
+vendor/lib64/libagm_mixer_plugin.so;DISABLE_CHECKELF
 vendor/lib64/libagm_pcm_plugin.so
 -vendor/lib64/libagmclient.so
 -vendor/lib64/libagmmixer.so
@@ -209,7 +214,7 @@ vendor/lib64/libmdsprpc.so
 # CNE
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
 vendor/bin/cnd
-vendor/bin/qms
+vendor/bin/qms;DISABLE_CHECKELF
 vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -245,11 +250,11 @@ vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/init/qms.rc
 vendor/etc/vintf/manifest/qms-saidl.xml
-vendor/lib64/libcne.so
+vendor/lib64/libcne.so;DISABLE_CHECKELF
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
-vendor/lib64/libmasc.so
+vendor/lib64/libmasc.so;DISABLE_CHECKELF
 vendor/lib64/libshsc.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
@@ -437,7 +442,7 @@ vendor/lib64/libarcsoft_supernight.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libc++_shared.so
-vendor/lib64/libc++_shared_vf.so
+vendor/lib64/libc++_shared_vf.so;FIX_SONAME
 vendor/lib64/libcalculator.so
 vendor/lib64/libcalculator_htp.so
 vendor/lib64/libcamera_nn_stub.so
@@ -847,6 +852,7 @@ system_ext/lib64/libdpmctmgr.so
 system_ext/lib64/libdpmfdmgr.so
 system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
+system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so;MODULE_SUFFIX=_vendor
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/bin/vendor.dpmd
@@ -1091,7 +1097,7 @@ vendor/bin/engine-service
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/loadalgo
 vendor/bin/loc_launcher
-vendor/bin/lowi-server
+vendor/bin/lowi-server;DISABLE_CHECKELF
 vendor/bin/mlid
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
@@ -1385,7 +1391,7 @@ vendor/lib64/libqc2audio_base.so
 vendor/lib64/libqc2audio_basecodec.so
 vendor/lib64/libqc2audio_core.so
 vendor/lib64/libqc2audio_hooks.so
-vendor/lib64/libqc2audio_hwaudiocodec.so
+vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_CHECKELF
 vendor/lib64/libqc2audio_platform.so
 vendor/lib64/libqc2audio_swaudiocodec.so
 vendor/lib64/libqc2audio_utils.so
