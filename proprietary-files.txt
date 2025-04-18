@@ -291,6 +291,8 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 # Camera
 system/lib/libpiex.so:vendor/lib/libpiex.so
 system/lib64/libpiex.so:vendor/lib64/libpiex.so
+vendor/lib/libbitmlengine.so
+vendor/lib/libcamera_nn_stub.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libcamxfacialfeatures.so
 vendor/lib/libcamxfdalgo.so
@@ -303,6 +305,7 @@ vendor/lib/libcamxswispiqmodule.so
 vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libofflinelog.so
+vendor/lib/libvideotxr.so
 vendor/lib/libvideoutils.so
 vendor/lib64/camera/com.qti.sensor.n7_aac_gc16b3c_front_iii.so
 vendor/lib64/camera/com.qti.sensor.n7_aac_ov16a1q_front_i.so
@@ -886,6 +889,7 @@ vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
 vendor/lib64/libspl.so
 vendor/lib64/libssd.so
+vendor/lib64/libStDrvInt.so
 vendor/lib64/libwvaidl.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
@@ -903,6 +907,7 @@ system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
+vendor/lib/libdiag.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdiagjni.so
 vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=-vendor
@@ -1494,6 +1499,7 @@ vendor/lib/libqti-iopd-client.so
 vendor/lib/libqti-iopd.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
+vendor/lib/libqti-util.so
 vendor/lib/libskewknob.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
@@ -1549,6 +1555,9 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 vendor/bin/pd-mapper
 vendor/bin/pm-proxy
 vendor/bin/pm-service
+vendor/lib/libpdmapper.so
+vendor/lib/libpdnotifier.so
+vendor/lib/libperipheral_client.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libperipheral_client.so
@@ -1611,6 +1620,9 @@ vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
 vendor/etc/sdr_config.cfg
 vendor/etc/sec_config
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_encdec.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
 vendor/lib64/libqmi.so
@@ -1698,6 +1710,7 @@ vendor/etc/telephony_packages.xml
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 vendor/etc/vintf/manifest/deviceinfo-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
+vendor/lib/libmdmdetect.so
 vendor/lib64/deviceInfoServiceModuleNr.so
 vendor/lib64/lib-rtpcommon.so
 vendor/lib64/lib-rtpcore.so
@@ -1846,6 +1859,8 @@ vendor/bin/sscrpcd
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
+vendor/lib/libsensorslog.so
+vendor/lib/libsnsapi.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsnpe_dsp_domains_v2.so
@@ -1963,6 +1978,7 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal
+-vendor/lib/libthermalclient.so
 -vendor/lib64/liblmthermallistner.so
 -vendor/lib64/libthermalclient.so
 vendor/bin/thermal-engine-v2
