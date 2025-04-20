@@ -388,6 +388,9 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
     libkeymaster_messages.vendor
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
