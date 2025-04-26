@@ -467,7 +467,7 @@ vendor/lib64/libmorpho_Ldc.so
 vendor/lib64/libmorpho_MFNR.so
 vendor/lib64/libmorpho_ldc.so
 vendor/lib64/libmorpho_ubwc.so
-vendor/lib64/libmorpho_video_stabilizer.so
+vendor/lib64/libmorpho_video_stabilizer.so;DISABLE_CHECKELF
 vendor/lib64/libmpbase.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
