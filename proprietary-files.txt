@@ -435,7 +435,7 @@ vendor/lib64/libmorpho_ImageRefiner.so
 vendor/lib64/libmorpho_ImageRefinerLite.so
 vendor/lib64/libmorpho_Ldc.so
 vendor/lib64/libmorpho_MFNR.so
-vendor/lib64/libmorpho_ldc.so
+vendor/lib64/libmorpho_ldc.so;FIX_SONAME
 vendor/lib64/libmorpho_ubwc.so
 vendor/lib64/libmorpho_video_stabilizer.so
 vendor/lib64/libmpbase.so
