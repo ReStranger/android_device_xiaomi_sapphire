@@ -409,8 +409,7 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.2.vendor \
     libcodec2_soft_common.vendor \
     libcodec2_vndk.vendor \
-    libsfplugin_ccodec_utils.vendor \
-    libplatformconfig
+    libsfplugin_ccodec_utils.vendor
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -454,15 +453,12 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libmm-omxcore \
-    libOmxCore \
     libopus.vendor \
     libstagefright_amrnb_common.vendor \
     libstagefright_enc_common.vendor \
     libstagefright_softomx.vendor \
     libstagefright_softomx_plugin.vendor \
     libstagefright_omx.vendor \
-    libstagefrighthw \
     libvorbisidec.vendor \
     libvpx.vendor
 
