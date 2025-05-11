@@ -92,6 +92,7 @@ vendor/lib/liblx-ar_util.so
 vendor/lib/libmcs.so
 vendor/lib/libpalclient.so
 vendor/lib/libqtigefar.so
+vendor/lib64/libcodec2_hidl_plugin.so
 vendor/lib/libsndcardparser.so
 vendor/lib/vendor.qti.hardware.pal@1.0.so
 vendor/lib64/hw/audio.primary.bengal.so
