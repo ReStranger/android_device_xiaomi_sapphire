@@ -1,5 +1,2 @@
 # Fingerprint
 type vendor_fingerprint_device, dev_type;
-
-# IR
-type lirc_device, dev_type;
