@@ -1387,10 +1387,7 @@ vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
 
 # Media configs
-vendor/etc/media_codecs_khaje_iot.xml
-vendor/etc/media_codecs_performance_khaje_iot.xml
 vendor/etc/media_khaje_iot/video_system_specs.json
-vendor/etc/media_profiles_khaje_iot.xml
 
 # Memory
 vendor/lib/libvmmem.so
