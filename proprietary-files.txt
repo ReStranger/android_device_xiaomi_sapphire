@@ -970,6 +970,36 @@ vendor/lib64/libdisplayfeature.so
 vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
+# Dolby
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service
+vendor/etc/dolby/dax-default.xml
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
+vendor/lib/libcodec2_hidl_plugin.so
+vendor/lib/libdapparamstorage.so
+vendor/lib/libdlbpreg.so
+vendor/lib/soundfx/libdlbvol.so
+vendor/lib/soundfx/libhwdap.so
+vendor/lib/soundfx/libswgamedap.so
+vendor/lib/soundfx/libswvqe.so
+vendor/lib/vendor.dolby.hardware.dms@2.0.so
+vendor/lib64/libcodec2_hidl_plugin.so
+vendor/lib64/libcodec2_soft_ac4dec.so
+vendor/lib64/libcodec2_soft_ddpdec.so
+vendor/lib64/libcodec2_store_dolby.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdeccfg.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/libdlbpreg.so
+vendor/lib64/soundfx/libdlbvol.so
+vendor/lib64/soundfx/libhwdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswvqe.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+
 # ESEPower Manager
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
@@ -1330,7 +1360,7 @@ vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
 vendor/etc/media_khaje_v0/video_system_specs.json
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
-vendor/etc/vintf/manifest/c2_manifest_vendor_sapphire.xml:vendor/etc/vintf/manifest/c2_manifest_vendor.xml|0e532bf1c7d6a0ee2e7e03a9cc3283a5bffc7f8e
+vendor/etc/vintf/manifest/c2_manifest_vendor_sapphire.xml:vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/lib/android.hardware.media.c2@1.0.so
 vendor/lib/libmediautils_vendor.so
 vendor/lib/libqc2audio_base.so

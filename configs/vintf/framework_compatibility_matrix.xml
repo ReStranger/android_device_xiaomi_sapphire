@@ -32,6 +32,7 @@
         <interface>
             <name>IComponentStore</name>
             <instance>default</instance>
+            <instance>dolby</instance>
             <instance>ozoaudio</instance>
             <instance>software</instance>
         </interface>
@@ -42,6 +43,7 @@
         <interface>
             <name>IComponentStore</name>
             <instance>default</instance>
+            <instance>dolby</instance>
             <instance>ozoaudio</instance>
             <instance>software</instance>
         </interface>
@@ -232,6 +234,14 @@
         <version>1.0</version>
         <interface>
             <name>IDisplayPostproc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.dolby.hardware.dms</name>
+        <version>2.0</version>
+        <interface>
+            <name>IDms</name>
             <instance>default</instance>
         </interface>
     </hal>
