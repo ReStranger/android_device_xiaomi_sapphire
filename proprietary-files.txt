@@ -911,34 +911,26 @@ vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display
 vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
-vendor/bin/init.qti.display_boot.sh
 vendor/bin/ppd
 vendor/bin/qdcmss
 vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib/qti.video.utils.videobufferlayout.so
 vendor/lib64/hw/gralloc.bengal.so
 vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpps.so
 vendor/lib64/libgpudataproducer.so
 vendor/lib64/libhdr_tm.so
-vendor/lib64/libhistogram.so
 vendor/lib64/libqseed3.so
 vendor/lib64/libqsocket.so
-vendor/lib64/libsdedrm.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmextension.so
-vendor/lib64/libsdmutils.so
 vendor/lib64/libtinyxml.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
@@ -956,16 +948,6 @@ vendor/etc/mdss_dsi_panel_m7_38_0c_0b_fhdp_video_mi.xml
 vendor/etc/mdss_dsi_panel_n7_38_0c_0a_fhdp_video_mi.xml
 vendor/etc/qdcm_calib_data_m7_38_0c_0b_video_mode_fhdp_dsi_panel.xml
 vendor/etc/qdcm_calib_data_n7_38_0c_0a_video_mode_fhdp_dsi_panel.xml
-
-# Displayfeature
-vendor/bin/displayfeature
-vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
-vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
-vendor/lib64/hw/displayfeature.default.so
-vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
-vendor/lib64/libdisplayfeature.so
-vendor/lib64/libdisplayfeatureservice.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
 # Dolby
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service

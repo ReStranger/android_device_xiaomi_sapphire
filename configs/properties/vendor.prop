@@ -291,17 +291,6 @@ trustkernel.log.state=disable
 debug.mdpcomp.logs=0
 debug.atrace.tags.enableflags=0
 
-# Displayfeature
-ro.vendor.all_modes.colorpick_adjust=true
-ro.vendor.bcbc.enable=true
-ro.vendor.cabc.enable=false
-ro.vendor.colorpick_adjust=true
-ro.vendor.histogram.enable=true
-ro.vendor.mi_sf.aosp_vrr_support=false
-ro.vendor.whitepoint_calibration_enable=true
-ro.vendor.xiaomi.bl.poll=true
-sys.displayfeature_hidl=true
-
 # Dolby
 ro.vendor.dolby.dax.version=DAX3_3.8.5.20_r1
 ro.vendor.audio.dolby.dax.version=DAX3_3.8.5.20_r1
