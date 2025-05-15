@@ -85,7 +85,6 @@ vendor/lib/libar-acdb.so
 vendor/lib/libar-gpr.so
 vendor/lib/libats.so
 vendor/lib/libaudio_log_utils.so
-vendor/lib/libbatterylistener.so
 vendor/lib/liblx-ar_util.so
 vendor/lib/libmcs.so
 vendor/lib/libqtigefar.so
@@ -95,7 +94,6 @@ vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
 vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libbatterylistener.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/libmcs.so
 vendor/lib64/libqtigefar.so
