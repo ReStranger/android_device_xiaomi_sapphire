@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.primary.default \
+    audio.primary.bengal \
     audio.r_submix.default \
     audio.usb.default \
     libaudiopreprocessing \
@@ -82,9 +83,34 @@ PRODUCT_PACKAGES += \
     libvolumelistener
 
 PRODUCT_PACKAGES += \
-    XiaomiDolby
+    audioadsprpcd \
+    libagm \
+    libar-pal \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle \
+    libaudiopreprocessing \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libvolumelistener \
+    libagm_compress_plugin \
+    libagm_mixer_plugin \
+    libagm_pcm_plugin \
+    libagmclient \
+    libagmmixer \
+    libbatterylistener \
+    libfmpal \
+    libhfp_pal \
+    libpalclient \
+    libsndcardparser \
+    vendor.qti.hardware.pal@1.0-impl \
+    vendor.qti.hardware.AGMIPC@1.0-impl
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm6225/audio/primary-hal
+
+PRODUCT_PACKAGES += \
+    XiaomiDolby
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/qssi/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \

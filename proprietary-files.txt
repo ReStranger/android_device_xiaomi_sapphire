@@ -1,9 +1,9 @@
 # All blobs below are extracted from sapphiren OS2.0.7.0.VNHMIXM and from eqs T1TBS33.32-8-9-7-2
 
 # Current blobs with ELF checks disabled:
-# libqtigefar and vendor.qti.hardware.pal@1.0-impl depend on libar-pal, which is decommonized
 # libqc2audio_hwaudiocodec depends on libpalclient, which is a gnu makefile target
-# vendor.qti.hardware.AGMIPC@1.0-impl and libmcs depend on libagm, which is decommonized
+# libmcs depends on libar-acdb, libagm, libats, liblx-osal which are gnu makefile targets
+# libqtigefar depends on libar-pal, which is a gnu makefile target
 
 # ACDB
 vendor/etc/acdbdata/bengal_idp/IDP_acdb_cal.acdb
@@ -36,7 +36,7 @@ vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 
 # ADSP modules
-vendor/lib/libkaraokepal.so
+vendor/lib/libkaraokepal.so;DISABLE_CHECKELF
 vendor/lib/rfsa/adsp/libSnpeHtpV68Skel.so
 vendor/lib/rfsa/adsp/libSnpeHtpV69Skel.so
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
@@ -54,7 +54,7 @@ vendor/lib/rfsa/adsp/misound_karaoke_res.bin
 vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
-vendor/lib64/libkaraokepal.so
+vendor/lib64/libkaraokepal.so;DISABLE_CHECKELF
 
 # ANT
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
@@ -69,76 +69,16 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # Audio
--vendor/lib/libar-gsl.so
--vendor/lib/libar-pal.so;DISABLE_CHECKELF
--vendor/lib/liblx-osal.so
--vendor/lib/vendor.qti.hardware.pal@1.0-impl.so
--vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so;DISABLE_CHECKELF
--vendor/lib64/liblx-osal.so
--vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
-system_ext/etc/permissions/audiosphere.xml
-system_ext/framework/audiosphere.jar
-vendor/lib/hw/audio.primary.bengal.so
-vendor/lib/libadm.so
-vendor/lib/libalsautils.so
-vendor/lib/libar-acdb.so
-vendor/lib/libar-gpr.so
-vendor/lib/libats.so
-vendor/lib/libaudio_log_utils.so
-vendor/lib/libbatterylistener.so
-vendor/lib/libhfp_pal.so
-vendor/lib/liblx-ar_util.so
-vendor/lib/libmcs.so
-vendor/lib/libpalclient.so
-vendor/lib/libqtigefar.so
-vendor/lib/libsndcardparser.so
-vendor/lib/vendor.qti.hardware.pal@1.0.so
-vendor/lib64/hw/audio.primary.bengal.so
 vendor/lib64/libadm.so
-vendor/lib64/libalsautils.so
-vendor/lib64/libar-acdb.so
-vendor/lib64/libar-gpr.so
-vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libbatterylistener.so
-vendor/lib64/libhfp_pal.so
-vendor/lib64/liblx-ar_util.so
-vendor/lib64/libmcs.so
-vendor/lib64/libpalclient.so
-vendor/lib64/libqtigefar.so
-vendor/lib64/libsndcardparser.so
-vendor/lib64/vendor.qti.hardware.pal@1.0.so
+vendor/lib64/libmcs.so;DISABLE_CHECKELF
+vendor/lib64/libpal_net_if.so
+vendor/lib64/libqtigefar.so;DISABLE_CHECKELF
 
 # Audio (FX modules)
 vendor/lib64/soundfx/libmisoundfx.so
 
-# Audio Graph Manager
--vendor/lib/libagm.so
--vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
--vendor/lib64/libagm.so
--vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
-vendor/bin/agmcap
-vendor/bin/agmcompressplay
-vendor/bin/agmhostless
-vendor/bin/agmplay
-vendor/bin/cplay
-vendor/lib/libagm_compress_plugin.so
-vendor/lib/libagm_mixer_plugin.so;DISABLE_CHECKELF
-vendor/lib/libagm_pcm_plugin.so
--vendor/lib/libagmclient.so
--vendor/lib/libagmmixer.so
-vendor/lib/vendor.qti.hardware.AGMIPC@1.0.so
-vendor/lib64/libagm_compress_plugin.so
-vendor/lib64/libagm_mixer_plugin.so;DISABLE_CHECKELF
-vendor/lib64/libagm_pcm_plugin.so
--vendor/lib64/libagmclient.so
--vendor/lib64/libagmmixer.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
-
 # Audio SoundFX
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libshoebox.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libshoebox.so
 
@@ -186,9 +126,6 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib64/lib_bt_aptx.so
-vendor/lib64/lib_bt_ble.so
-vendor/lib64/lib_bt_bundle.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libbt-hidlclient.so
@@ -976,7 +913,6 @@ vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
-vendor/lib/libcodec2_hidl_plugin.so
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdlbpreg.so
 vendor/lib/soundfx/libdlbvol.so
@@ -984,7 +920,6 @@ vendor/lib/soundfx/libhwdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib/soundfx/libswvqe.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
-vendor/lib64/libcodec2_hidl_plugin.so
 vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_ddpdec.so
 vendor/lib64/libcodec2_store_dolby.so
@@ -1016,7 +951,6 @@ system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/etc/init.qti.fm.sh
 vendor/etc/init/init.qti.fm.rc
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/libfmpal.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
 
 # Fastcv
@@ -1157,7 +1091,6 @@ vendor/lib64/liblowi_common.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmapdata_api.so
-vendor/lib64/libpal_net_if.so
 vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsys_info_cache.so
 vendor/lib64/libtzdrmgenprov.so
