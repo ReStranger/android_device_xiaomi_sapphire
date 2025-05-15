@@ -128,13 +128,11 @@ vendor/lib/libagm_mixer_plugin.so;DISABLE_CHECKELF
 vendor/lib/libagm_pcm_plugin.so
 -vendor/lib/libagmclient.so
 -vendor/lib/libagmmixer.so
-vendor/lib/vendor.qti.hardware.AGMIPC@1.0.so
 vendor/lib64/libagm_compress_plugin.so
 vendor/lib64/libagm_mixer_plugin.so;DISABLE_CHECKELF
 vendor/lib64/libagm_pcm_plugin.so
 -vendor/lib64/libagmclient.so
 -vendor/lib64/libagmmixer.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Audio SoundFX
 vendor/lib/soundfx/libasphere.so
