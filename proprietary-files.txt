@@ -114,11 +114,6 @@ vendor/lib64/soundfx/libmisoundfx.so
 -vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
 -vendor/lib64/libagm.so
 -vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
-vendor/bin/agmcap
-vendor/bin/agmcompressplay
-vendor/bin/agmhostless
-vendor/bin/agmplay
-vendor/bin/cplay
 vendor/lib/libagm_mixer_plugin.so;DISABLE_CHECKELF
 -vendor/lib/libagmclient.so
 -vendor/lib/libagmmixer.so
