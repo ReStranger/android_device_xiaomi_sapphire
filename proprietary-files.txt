@@ -89,7 +89,6 @@ vendor/lib/libbatterylistener.so
 vendor/lib/libhfp_pal.so
 vendor/lib/liblx-ar_util.so
 vendor/lib/libmcs.so
-vendor/lib/libpalclient.so
 vendor/lib/libqtigefar.so
 vendor/lib64/hw/audio.primary.bengal.so
 vendor/lib64/libadm.so
@@ -101,7 +100,6 @@ vendor/lib64/libbatterylistener.so
 vendor/lib64/libhfp_pal.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/libmcs.so
-vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
 
 # Audio (FX modules)
