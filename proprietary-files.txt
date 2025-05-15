@@ -81,7 +81,6 @@ system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib/hw/audio.primary.bengal.so
 vendor/lib/libadm.so
-vendor/lib/libalsautils.so
 vendor/lib/libar-acdb.so
 vendor/lib/libar-gpr.so
 vendor/lib/libats.so
@@ -95,7 +94,6 @@ vendor/lib/libqtigefar.so
 vendor/lib/libsndcardparser.so
 vendor/lib64/hw/audio.primary.bengal.so
 vendor/lib64/libadm.so
-vendor/lib64/libalsautils.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
 vendor/lib64/libats.so
