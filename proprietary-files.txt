@@ -1716,7 +1716,6 @@ vendor/lib64/libnetmgrext_interface_server.so
 vendor/lib64/libnetmgrmodemproxy.so
 vendor/lib64/libnetmgrportutils.so
 vendor/lib64/libnetmgrxfrmutils.so
-vendor/lib64/libnfnetlink.so
 vendor/lib64/libnlnetmgr.so
 vendor/lib64/liboemaids_vendor.so
 vendor/lib64/libqcmaputils.so
