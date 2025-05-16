@@ -960,7 +960,6 @@ vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
-vendor/lib/libcodec2_hidl_plugin.so
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdlbpreg.so
 vendor/lib/soundfx/libdlbvol.so
@@ -968,7 +967,6 @@ vendor/lib/soundfx/libhwdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib/soundfx/libswvqe.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
-vendor/lib64/libcodec2_hidl_plugin.so
 vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_ddpdec.so
 vendor/lib64/libcodec2_store_dolby.so
