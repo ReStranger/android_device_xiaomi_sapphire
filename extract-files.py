@@ -50,6 +50,10 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.imsrtpservice@3.1',
     ): lib_fixup_vendor_suffix,
     (
+        'libar-pal',
+        'libagm',
+        'libagmclient',
+        'libpalclient',
         'libsndcardparser',
     ): lib_fixup_remove,
 }
