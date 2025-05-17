@@ -103,9 +103,9 @@ vendor/lib64/soundfx/libmisoundfx.so
 
 # Audio Graph Manager
 -vendor/lib/libagm.so
--vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
+-vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so;DISABLE_CHECKELF
 -vendor/lib64/libagm.so
--vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so;DISABLE_CHECKELF
 vendor/lib/libagm_mixer_plugin.so;DISABLE_CHECKELF
 -vendor/lib/libagmclient.so
 -vendor/lib/libagmmixer.so
