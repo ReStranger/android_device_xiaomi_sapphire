@@ -71,22 +71,40 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl:64
 
 PRODUCT_PACKAGES += \
-    audio.primary.default \
+    audio.bluetooth.default:64 \
     audio.r_submix.default:64 \
     audio.usb.default:64 \
     audio.primary.bengal:64 \
-    sound_trigger.primary.bengal:64 \
+    sound_trigger.primary.bengal:64
+
+PRODUCT_PACKAGES += \
+    audioadsprpcd \
+    libagm:64 \
+    lib_bt_aptx:64 \
+    lib_bt_ble:64 \
+    lib_bt_bundle:64 \
     libaudiopreprocessing:64 \
     libqcompostprocbundle:64 \
     libqcomvisualizer:64 \
     libqcomvoiceprocessing:64 \
-    libtinycompress:64 \
-    libvolumelistener:64
+    libvolumelistener:64 \
+    libagm_compress_plugin:64 \
+    libagm_mixer_plugin:64 \
+    libagm_pcm_plugin:64 \
+    libagmclient:64 \
+    libagmmixer:64 \
+    libbatterylistener:64 \
+    libfmpal:64 \
+    libhfp_pal:64 \
+    libpalclient:64 \
+    libsndcardparser:64 \
+    vendor.qti.hardware.pal@1.0-impl:64 \
+    vendor.qti.hardware.AGMIPC@1.0-impl:64
+
+AUDIO_HAL_DIR := hardware/qcom-caf/sm6225/audio/primary-hal
 
 PRODUCT_PACKAGES += \
     XiaomiDolby
-
-AUDIO_HAL_DIR := hardware/qcom-caf/sm6225/audio/primary-hal
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/qssi/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
