@@ -74,6 +74,8 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.r_submix.default:64 \
     audio.usb.default:64 \
+    audio.primary.bengal:64 \
+    sound_trigger.primary.bengal:64 \
     libaudiopreprocessing:64 \
     libqcompostprocbundle:64 \
     libqcomvisualizer:64 \
