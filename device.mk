@@ -65,22 +65,22 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.1-impl \
-    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio@7.1-impl:64 \
+    android.hardware.audio.effect@7.0-impl:64 \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl:64
 
 PRODUCT_PACKAGES += \
-    audio.primary.default \
-    audio.primary.bengal \
-    audio.r_submix.default \
-    audio.usb.default \
-    libaudiopreprocessing \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libtinycompress \
-    libvolumelistener
+    audio.primary.default:64 \
+    audio.primary.bengal:64 \
+    audio.r_submix.default:64 \
+    audio.usb.default:64 \
+    libaudiopreprocessing:64 \
+    libqcompostprocbundle:64 \
+    libqcomvisualizer:64 \
+    libqcomvoiceprocessing:64 \
+    libtinycompress:64 \
+    libvolumelistener:64
 
 PRODUCT_PACKAGES += \
     audioadsprpcd \
@@ -136,11 +136,11 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio-impl:64 \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio-V2-ndk.vendor \
-    audio.bluetooth.default \
+    audio.bluetooth.default:64 \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
@@ -152,18 +152,18 @@ PRODUCT_COPY_FILES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti \
-    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-impl-qti:64 \
+    android.hardware.boot@1.2-impl-qti.recovery:64 \
     android.hardware.boot@1.2-service
 
 # Camera
 PRODUCT_PACKAGES += \
     libutilscallstack.vendor \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.device@3.6.vendor:64 \
+    android.hardware.camera.provider@2.4-impl:64 \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
-    libdng_sdk.vendor \
+    libdng_sdk.vendor:64 \
     libgui_vendor \
     libstdc++_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
@@ -436,7 +436,7 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_common.vendor \
     libcodec2_vndk.vendor \
     libsfplugin_ccodec_utils.vendor \
-    libplatformconfig
+    libplatformconfig:64
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -480,15 +480,15 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libmm-omxcore \
-    libOmxCore \
+    libmm-omxcore:64 \
+    libOmxCore:64 \
     libopus.vendor \
     libstagefright_amrnb_common.vendor \
     libstagefright_enc_common.vendor \
-    libstagefright_softomx.vendor \
-    libstagefright_softomx_plugin.vendor \
-    libstagefright_omx.vendor \
-    libstagefrighthw \
+    libstagefright_softomx.vendor:64 \
+    libstagefright_softomx_plugin.vendor:64 \
+    libstagefright_omx.vendor:64 \
+    libstagefrighthw:64 \
     libvorbisidec.vendor \
     libvpx.vendor
 
@@ -546,7 +546,7 @@ PRODUCT_PACKAGES += \
     libjsoncpp.vendor \
     libqti_vndfwk_detect.vendor \
     libqti_vndfwk_detect_vendor \
-    libvndfwk_detect_jni.qti.vendor
+    libvndfwk_detect_jni.qti.vendor:64
 
 # QTI service tracker
 PRODUCT_PACKAGES += \
@@ -704,9 +704,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd-V1-ndk.vendor \
     android.hardware.wifi.supplicant-V1-ndk.vendor \
     hostapd \
-    libwpa_client \
-    libwifi-hal-ctrl \
-    libwifi-hal-qcom \
+    libwpa_client:64 \
+    libwifi-hal-qcom:64 \
+    libwifi-hal-qcom:64 \
     wpa_supplicant \
     wpa_supplicant.conf
 
