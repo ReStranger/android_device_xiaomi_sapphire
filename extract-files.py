@@ -58,6 +58,7 @@ lib_fixups: lib_fixups_user_type = {
         'libats',
         'liblx-osal',
         'libpalclient',
+        'audio.primary.bengal',
     ): lib_fixup_remove,
 }
 

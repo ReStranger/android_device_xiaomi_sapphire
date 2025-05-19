@@ -36,7 +36,7 @@ vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 
 # ADSP modules
-vendor/lib/libkaraokepal.so
+vendor/lib/libkaraokepal.so;DISABLE_CHECKELF
 vendor/lib/rfsa/adsp/libSnpeHtpV68Skel.so
 vendor/lib/rfsa/adsp/libSnpeHtpV69Skel.so
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
@@ -54,7 +54,7 @@ vendor/lib/rfsa/adsp/misound_karaoke_res.bin
 vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
-vendor/lib64/libkaraokepal.so
+vendor/lib64/libkaraokepal.so;DISABLE_CHECKELF
 
 # ANT
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
@@ -247,6 +247,9 @@ vendor/lib/libvideoutils.so
 vendor/lib/libvideotxr.so
 vendor/lib/libbitmlengine.so
 vendor/lib/libcamera_nn_stub.so
+vendor/lib/libqdMetaData.so
+vendor/lib/libgralloc.qti.so
+vendor/lib/libgrallocutils.so
 vendor/lib64/camera/com.qti.sensor.n7_aac_gc16b3c_front_iii.so
 vendor/lib64/camera/com.qti.sensor.n7_aac_ov16a1q_front_i.so
 vendor/lib64/camera/com.qti.sensor.n7_aac_s5k4h7_ultra_i.so
@@ -358,6 +361,9 @@ vendor/lib64/com.xiaomi.plugin.skinbeautifier.so
 vendor/lib64/com.xiaomi.plugin.swflip.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libqdMetaData.so
+vendor/lib64/libgralloc.qti.so
+vendor/lib64/libgrallocutils.so
 vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libSnpeHtpPrepare.so
@@ -425,7 +431,7 @@ vendor/lib64/libmorpho_ImageRefiner.so
 vendor/lib64/libmorpho_ImageRefinerLite.so
 vendor/lib64/libmorpho_Ldc.so
 vendor/lib64/libmorpho_MFNR.so
-vendor/lib64/libmorpho_ldc.so
+vendor/lib64/libmorpho_ldc.so;FIX_SONAME
 vendor/lib64/libmorpho_ubwc.so
 vendor/lib64/libmorpho_video_stabilizer.so;DISABLE_CHECKELF
 vendor/lib64/libmpbase.so
@@ -874,6 +880,7 @@ vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpps.so
 vendor/lib64/libgpudataproducer.so
+vendor/lib64/libgralloccore.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libhistogram.so
 vendor/lib64/libqseed3.so
@@ -1240,7 +1247,7 @@ system_ext/priv-app/ims/ims.apk|9065ecc8af98f75e860e6294524fd801ba0ebcc3
 vendor/etc/init/ipa_fws.rc
 
 # IR
-vendor/lib64/hw/consumerir.qcom.so:vendor/lib64/hw/consumerir.bengal.so
+vendor/lib64/hw/consumerir.qcom.so
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service-qti
@@ -1261,7 +1268,7 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
 # Listen
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
-vendor/lib/hw/sound_trigger.primary.bengal.so
+vendor/lib/hw/sound_trigger.primary.bengal.so;DISABLE_CHECKELF
 vendor/lib/libcapiv2svacnnvendor.so
 vendor/lib/libcapiv2svarnnvendor.so
 vendor/lib/libcapiv2uvvendor.so
@@ -1269,7 +1276,7 @@ vendor/lib/libeai_fixed_32.so
 vendor/lib/liblistensoundmodel2vendor.so
 vendor/lib/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
 vendor/lib/vendor.qti.hardware.ListenSoundModel@1.0.so
-vendor/lib64/hw/sound_trigger.primary.bengal.so
+vendor/lib64/hw/sound_trigger.primary.bengal.so;DISABLE_CHECKELF
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2uvvendor.so
@@ -1695,6 +1702,7 @@ vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqdpr.so
 vendor/lib64/libqdutils.so
+vendor/lib64/libqservice.so
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqrtr.so
 vendor/lib64/librcc.so
