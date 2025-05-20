@@ -80,8 +80,7 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/soundfx/libhwdap.so', 
      'vendor/lib64/libdlbdsservice.so', 
      'vendor/lib64/libcodec2_soft_ac4dec.so', 
-     'vendor/lib64/libcodec2_soft_ddpdec.so',
-     'vendor/lib64/hw/displayfeature.default.so'): blob_fixup()
+     'vendor/lib64/libcodec2_soft_ddpdec.so'): blob_fixup()
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     'libcodec2_hidl@1.0.so': blob_fixup()
         .add_needed('libshim.so'),
