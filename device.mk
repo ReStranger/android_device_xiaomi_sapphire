@@ -479,20 +479,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
-# OMX
-PRODUCT_PACKAGES += \
-    libmm-omxcore:64 \
-    libOmxCore:64 \
-    libopus.vendor \
-    libstagefright_amrnb_common.vendor \
-    libstagefright_enc_common.vendor \
-    libstagefright_softomx.vendor:64 \
-    libstagefright_softomx_plugin.vendor:64 \
-    libstagefright_omx.vendor:64 \
-    libstagefrighthw:64 \
-    libvorbisidec.vendor \
-    libvpx.vendor
-
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
