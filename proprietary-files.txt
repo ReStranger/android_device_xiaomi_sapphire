@@ -51,7 +51,6 @@ vendor/lib/rfsa/adsp/misound_karaoke_res.bin
 vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
-vendor/lib64/libkaraokepal.so;DISABLE_CHECKELF
 
 # ANT
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
@@ -999,6 +998,7 @@ vendor/etc/sap.conf
 vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
 vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
 vendor/etc/xtwifi.conf
+system/lib64/libprocessgroup.so
 vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
 vendor/lib64/libbatching.so
 vendor/lib64/libdataitems.so
