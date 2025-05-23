@@ -401,9 +401,9 @@ vendor/lib64/libmorpho_ImageRefiner.so
 vendor/lib64/libmorpho_ImageRefinerLite.so
 vendor/lib64/libmorpho_Ldc.so
 vendor/lib64/libmorpho_MFNR.so
-vendor/lib64/libmorpho_ldc.so
+vendor/lib64/libmorpho_ldc.so;FIX_SONAME
 vendor/lib64/libmorpho_ubwc.so
-vendor/lib64/libmorpho_video_stabilizer.so
+vendor/lib64/libmorpho_video_stabilizer.so;DISABLE_CHECKELF
 vendor/lib64/libmpbase.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
@@ -1147,7 +1147,7 @@ system_ext/priv-app/ims/ims.apk|9065ecc8af98f75e860e6294524fd801ba0ebcc3
 vendor/etc/init/ipa_fws.rc
 
 # IR
-vendor/lib64/hw/consumerir.qcom.so:vendor/lib64/hw/consumerir.bengal.so
+vendor/lib64/hw/consumerir.qcom.so
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service-qti
@@ -1168,7 +1168,7 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
 # Listen
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
-vendor/lib64/hw/sound_trigger.primary.bengal.so
+vendor/lib64/hw/sound_trigger.primary.bengal.so;DISABLE_CHECKELF
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2uvvendor.so
