@@ -44,5 +44,8 @@ dontaudit vendor_init tombstone_data_file:dir search;
 # Allow vendor_init to get attributes for the character device /dev/qg
 allow vendor_init vendor_qg_device:chr_file getattr;
 
+# Allow init to write into vendor_sysfs_memory
+allow init vendor_sysfs_memory:file write;
+
 dontaudit vendor_init default_prop:property_service set;
 dontaudit vendor_init config_prop:property_service set;
