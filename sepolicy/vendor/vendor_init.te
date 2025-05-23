@@ -47,5 +47,8 @@ allow vendor_init vendor_qg_device:chr_file getattr;
 # Allow init to write into vendor_sysfs_memory
 allow init vendor_sysfs_memory:file write;
 
+# Allow vold to write to vendor_sysfs_memory
+allow vold vendor_sysfs_memory:file write;
+
 dontaudit vendor_init default_prop:property_service set;
 dontaudit vendor_init config_prop:property_service set;
