@@ -6,4 +6,13 @@ allow tee vendor_fingerprint_data_file:file create_file_perms;
 allow tee vendor_gpt_block_device:blk_file { read };
 allow tee vendor_xbl_block_device:blk_file { read };
 
+# dontaudit tee to read and write to character device labeled 'device'
+dontaudit tee device:chr_file { read write };
+
+# Allow tee to open block device vendor_gpt_block_device
+allow tee vendor_gpt_block_device:blk_file open;
+
+# dontaudit  tee to read block device labeled 'block_device'
+dontaudit tee block_device:blk_file read;
+
 typeattribute tee data_between_core_and_vendor_violators;
