@@ -9,3 +9,6 @@ allow vendor_qti_init_shell sysfs:file { write };
 allow vendor_qti_init_shell vendor_sysfs_msm_perf:file w_file_perms;
 allow vendor_qti_init_shell vendor_qti_init_shell:lockdown { integrity };
 allow vendor_qti_init_shell vendor_sysfs_qdss_dev:file { setattr write };
+
+# Allow vendor_qti_init_shell to set attributes for the sysfs file
+allow vendor_qti_init_shell sysfs:file setattr;
