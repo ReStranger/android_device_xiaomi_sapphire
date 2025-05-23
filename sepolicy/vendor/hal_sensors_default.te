@@ -1,0 +1,2 @@
+# Allow hal_sensors_default to read sysfs_tp_fodstatus
+allow hal_sensors_default sysfs_tp_fodstatus:file read;
