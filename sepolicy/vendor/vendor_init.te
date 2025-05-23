@@ -29,6 +29,20 @@ dontaudit vendor_init userdebug_or_eng_prop:property_service set;
 # Allow vendor_init to set the ro.vendor.qti.cgroup_follow.enable property
 allow vendor_init vendor_cgroup_follow_prop:property_service set;
 
+# dontaudit vendor_init to read the default_prop file
+dontaudit vendor_init default_prop:file read;
+
+# Allow vendor_init to write to the root directory of debugfs
+allow vendor_init debugfs:dir write;
+
+# Allow vendor_init to write to /proc/sys/kernel/sched_util_clamp_min_rt_default
+allow vendor_init proc_sched:file write;
+
+# dontaudit vendor_init to search the tombstones directory
+dontaudit vendor_init tombstone_data_file:dir search;
+
+# Allow vendor_init to get attributes for the character device /dev/qg
+allow vendor_init vendor_qg_device:chr_file getattr;
 
 dontaudit vendor_init default_prop:property_service set;
 dontaudit vendor_init config_prop:property_service set;
