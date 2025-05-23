@@ -20,5 +20,15 @@ allow vendor_qti_init_shell configfs:{
   lnk_file
 } create_file_perms;
 
+# dontaudit vendor_init to set the persist.traced.enable property
+dontaudit vendor_init traced_enabled_prop:property_service set;
+
+# dontaudit vendor_init to set the ro.debuggable property
+dontaudit vendor_init userdebug_or_eng_prop:property_service set;
+
+# Allow vendor_init to set the ro.vendor.qti.cgroup_follow.enable property
+allow vendor_init vendor_cgroup_follow_prop:property_service set;
+
+
 dontaudit vendor_init default_prop:property_service set;
 dontaudit vendor_init config_prop:property_service set;
