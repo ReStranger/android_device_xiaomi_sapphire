@@ -1,0 +1,2 @@
+# dontaudit stflashtool to read the nfc_prop file
+dontaudit stflashtool nfc_prop:file read;
