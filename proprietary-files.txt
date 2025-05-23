@@ -831,7 +831,6 @@ vendor/bin/qdcmss
 vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/hw/gralloc.bengal.so
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
