@@ -325,7 +325,6 @@ vendor/lib64/libvidhance_stabilizer.so
 vendor/lib64/libwa_dof.so
 vendor/lib64/libwa_rtdof.so
 vendor/lib64/libxmi_high_dynamic_range.so
-system/lib64/libpiex.so:vendor/lib64/libpiex.so
 
 # Camera postproc
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
@@ -652,8 +651,6 @@ odm/lib64/hw/fingerprint.goodix_fod.default.so:vendor/lib64/hw/fingerprint.goodi
 odm/lib64/libgf_hal.so:vendor/lib64/libgf_hal.so
 vendor/lib64/libmifpext.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 
 # Firmware touch
 odm/firmware/Conf_MultipleTest_ft3519t.ini:vendor/firmware/Conf_MultipleTest_ft3519t.ini
@@ -849,7 +846,6 @@ system_ext/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk.so
 vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
 vendor/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
 vendor/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
-vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
 
 # Thermal
 vendor/bin/thermal-engine-v2
@@ -1630,7 +1626,6 @@ vendor/etc/media_khaje_v0/video_system_specs.json
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_sapphire.xml:vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/lib64/android.hardware.media.c2@1.0.so
-vendor/lib64/libmediautils_vendor.so
 vendor/lib64/libmmosal_vendor.so
 vendor/lib64/libmmrtpdecoder_vendor.so
 vendor/lib64/libmmrtpencoder_vendor.so
@@ -1714,11 +1709,9 @@ vendor/lib64/liblearningmodule.so
 vendor/lib64/liblightninglaunches.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
-vendor/lib64/libmemunreachable.so
 vendor/lib64/libmeters-ns.so
 vendor/lib64/libmeters.so
 vendor/lib64/libpasrutils.so
-vendor/lib64/libpcap.so
 vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so
 vendor/lib64/libperfioctl.so
