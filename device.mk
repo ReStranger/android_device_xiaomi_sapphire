@@ -51,23 +51,42 @@ SOONG_CONFIG_android_hardware_audio_run_64bit := true
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.audio.service_64
 
 PRODUCT_PACKAGES += \
     audio.primary.default \
+    audio.primary.bengal \
+    audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
+    sound_trigger.primary.bengal \
+    libtinycompress
+
+PRODUCT_PACKAGES += \
+    audioadsprpcd \
+    libagm \
+    libar-pal \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle \
     libaudiopreprocessing \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libtinycompress \
-    libvolumelistener
-
-PRODUCT_PACKAGES += \
-    audioadsprpcd \
+    libvolumelistener \
+    libagm_compress_plugin \
+    libagm_mixer_plugin \
+    libagm_pcm_plugin \
+    libagmclient \
+    libagmmixer \
     libbatterylistener \
-    libhfp_pal
+    libfmpal \
+    libhfp_pal \
+    libpalclient \
+    libsndcardparser \
+    vendor.qti.hardware.pal@1.0-impl \
+    vendor.qti.hardware.AGMIPC@1.0-impl
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm6225/audio/primary-hal
 
@@ -98,7 +117,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1.vendor \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio-V2-ndk.vendor \
-    audio.bluetooth.default \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
