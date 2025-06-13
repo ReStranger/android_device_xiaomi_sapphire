@@ -1,2 +1,10 @@
 # ODM Fwk-Detect
 ro.vendor.qti.va_odm.support=1
+
+# ADB on boot
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
+persist.service.debuggable=1
+persist.service.adb.enable=1
+persist.vendor.usb.config=mtp,adb
