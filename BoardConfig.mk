@@ -62,6 +62,8 @@ BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 
 TARGET_USES_QCOM_MM_AUDIO := true
 
+$(call soong_config_set, android_hardware_audio, run_64bit, true)
+
 # Boot control
 SOONG_CONFIG_NAMESPACES += ufsbsg
 SOONG_CONFIG_ufsbsg += ufsframework
