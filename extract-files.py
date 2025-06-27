@@ -48,6 +48,19 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.imsrtpservice@3.1',
     ): lib_fixup_vendor_suffix,
+    (
+        'libar-pal',
+        'libagm',
+        'libar-acdb',
+        'libar-gpr',
+        'libar-gsl',
+        'liblx-osal',
+        'liblx-ar_util',
+        'libats',
+        'libagmclient',
+        'libpalclient',
+        'libsndcardparser',
+    ): lib_fixup_remove,
 }
 blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/android.hardware.security.keymint-service-qti', 'vendor/lib64/libqtikeymint.so'): blob_fixup()
