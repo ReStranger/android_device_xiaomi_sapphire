@@ -49,25 +49,25 @@ SOONG_CONFIG_android_hardware_audio += \
 SOONG_CONFIG_android_hardware_audio_run_64bit := true
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.1-impl \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.audio@7.1-impl:64 \
+    android.hardware.audio.effect@7.0-impl:64 \
+    android.hardware.soundtrigger@2.3-impl:64
 
 PRODUCT_PACKAGES += \
-    audio.primary.default \
-    audio.r_submix.default \
-    audio.usb.default \
-    libaudiopreprocessing \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libtinycompress \
-    libvolumelistener
+    audio.primary.default:64 \
+    audio.r_submix.default:64 \
+    audio.usb.default:64 \
+    libaudiopreprocessing:64 \
+    libqcompostprocbundle:64 \
+    libqcomvisualizer:64 \
+    libqcomvoiceprocessing:64 \
+    libtinycompress:64 \
+    libvolumelistener:64
 
 PRODUCT_PACKAGES += \
     audioadsprpcd \
-    libbatterylistener \
-    libhfp_pal
+    libbatterylistener:64 \
+    libhfp_pal:64
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm6225/audio/primary-hal
 
@@ -93,7 +93,7 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio-impl:64 \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.bluetooth.audio@2.1.vendor \
     android.hardware.bluetooth@1.0.vendor \
@@ -115,17 +115,17 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti \
-    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-impl-qti:64 \
+    android.hardware.boot@1.2-impl-qti.recovery:64 \
     android.hardware.boot@1.2-service
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.device@3.6.vendor:64 \
+    android.hardware.camera.provider@2.4-impl:64 \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
-    libdng_sdk.vendor \
+    libdng_sdk.vendor:64 \
     libgui_vendor \
     libstdc++_vendor \
     libutilscallstack.vendor \
@@ -599,9 +599,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd-V1-ndk.vendor \
     android.hardware.wifi.supplicant-V1-ndk.vendor \
     hostapd \
-    libwpa_client \
-    libwifi-hal-ctrl \
-    libwifi-hal-qcom \
+    libwpa_client:64 \
+    libwifi-hal-ctrl:64 \
+    libwifi-hal-qcom:64 \
     wpa_supplicant \
     wpa_supplicant.conf
 
