@@ -22,7 +22,6 @@ vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 
 # ADSP
 vendor/bin/adsprpcd
-vendor/bin/audioadsprpcd
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
 vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/lib64/libadsp_default_listener.so
@@ -48,8 +47,6 @@ vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
 
 # Audio
-system_ext/etc/permissions/audiosphere.xml
-system_ext/framework/audiosphere.jar
 vendor/lib64/libadm.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libmcs.so;DISABLE_CHECKELF
